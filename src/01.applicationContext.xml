@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="lassaTireId"
+		class="io.spring.tutorial.part01.spring.model.Lassa" />
+
+	<bean id="continentalTireId"
+		class="io.spring.tutorial.part01.spring.model.Continental" />
+
+	<bean id="goodYearTireId"
+		class="io.spring.tutorial.part01.spring.model.GoodYear" />
+
+	<bean id="carId"
+		class="io.spring.tutorial.part01.spring.model.Car">
+		<property name="wheel" ref="lassaTireId" />	<!-- It is required for setter injection -->
+	</bean>
+
+</beans>
