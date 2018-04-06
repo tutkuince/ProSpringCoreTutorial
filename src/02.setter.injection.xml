@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="employee1"
+		class="io.spring.tutorial.part02.setterinjection.model.Employee">
+		<property name="name" value="employeeName" />		<!-- Setter injection -->
+		<property name="surname" value="employeeSurname" />	<!-- Setter injection -->
+		<property name="salary" value="5000" />				<!-- Setter injection -->
+		<property name="age" value="30" />					<!-- Setter injection -->
+	</bean>
+
+	<bean id="employee2"
+		class="io.spring.tutorial.part02.setterinjection.model.Employee">
+		<property name="name" value="Tutku" />		<!-- Setter injection -->
+		<property name="surname" value="Ince" />	<!-- Setter injection -->
+		<property name="salary" value="10000" />				<!-- Setter injection -->
+		<property name="age" value="29" />					<!-- Setter injection -->
+	</bean>
+
+	<bean id="employee3"
+		class="io.spring.tutorial.part02.setterinjection.model.Employee"
+		p:name="Utku" p:surname="Ince" p:salary="1000" p:age="19" />
+
+
+	<bean id="department1" class="io.spring.tutorial.part02.setterinjection.model.Department">
+		<property name="name" value="IT"></property>
+		<property name="location" value="HQ"></property>
+	</bean>
+	
+	<bean id="employee4"
+		class="io.spring.tutorial.part02.setterinjection.model.Employee">
+		<property name="name" value="Ugur" />		
+		<property name="surname" value="Batikan" />	
+		<property name="salary" value="10000" />	
+		<property name="age" value="29" />			
+		<property name="department" ref="department1" /> <!-- ref to department1 -->
+	</bean>
+</beans>
