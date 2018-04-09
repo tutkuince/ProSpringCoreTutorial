@@ -25,9 +25,19 @@
 					<property name="studentNo" value="090301035" />
 					<property name="fullName" value="Tutku Ince"></property>
 				</bean>
-				
-				<ref bean="std2"/>
+
+				<ref bean="std2" />
 			</list>
+		</property>
+
+		<property name="idNameList">
+			<map>
+				<!-- <entry key="key1"> -->
+				<!-- <value></value> -->
+				<!-- </entry> -->
+				<entry key="key1" value="100"></entry>
+				<entry key="key2" value="200"></entry>				
+			</map>
 		</property>
 	</bean>
 
